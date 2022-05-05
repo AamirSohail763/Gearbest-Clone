@@ -72,7 +72,10 @@
     height: 26px;
     width: 355px;
     padding: 3px 0 3px 0;
-    border: 0px;
+    border: none;
+    resize: none;
+    outline: none;
+
 }
 #searchBtn{
     background-color: rgb(255,218,0);
@@ -244,12 +247,12 @@
     display:none;
 
 }
-#invisible:hover{
-    display: block;
-}
 #headsignInSpan:hover #invisible{
     /* visibility: visible;
     opacity: 1; */
+    display: block;
+}
+#invisible:hover{
     display: block;
 }
 #invisible p{
@@ -337,4 +340,82 @@
     display: block;
     cursor: pointer;
     border: 0px;
+}
+/* ********************** */
+#H_appInfo{
+    height: 163px;
+    width: 242px;
+    display: block;
+    /* border: 1px dashed olive; */
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    background-color: white;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    top: 80%;
+    left: 5%;
+    padding: 10px;
+    display: none;
+}
+
+#H_appInfo :nth-child(1){
+    font-size: 14px;
+    line-height: 18px;
+    height: 18px;
+    width: 242px;
+    margin: 0 0 5px 0;
+    display: block;
+    /* border: 1px dashed pink; */
+    color: black;
+    font-weight: bolder;
+    text-align: start;
+}
+#H_appInfo p{
+    font-size: 12px;
+    line-height: 20px;
+    color: black;
+    height: 20px;
+    width: 242px;
+    margin: 5px 0 5px 0;
+    text-align: start;
+    /* display: -webkit-box; */
+}
+#H_appImages{
+    height: 100px;
+    width: 126px;
+    margin: 15px 0 0 0;
+    padding: 0 0 5px 116px;
+    display: flex;
+    /* border: 1px dashed teal; */
+    position: relative;
+}
+#H_appImages :nth-child(1){
+    display: block;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 0;
+    left: 0%;
+}
+#H_appImages :nth-child(2){
+    display: block;
+    height: 50px;
+    width: 138px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#H_appImages :nth-child(3){
+    display: block;
+    height: 50px;
+    width: 138px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#invisible2{
+    position: relative;
+}
+#invisible2:hover #H_appInfo{
+    display: block;
 }
