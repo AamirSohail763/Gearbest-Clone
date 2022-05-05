@@ -306,10 +306,10 @@ form span{
     font-size: 14px;
     line-height: 16px;
     text-align: center;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     background-color: black;
     color: white;
-    height: 41.7px;
+    height: 41px;
     width: 120px;
     margin: 0 0 0 -5px;
     padding: 1px 6px 1px 6px;
