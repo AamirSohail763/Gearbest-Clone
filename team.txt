@@ -4,3 +4,6 @@ Team GearBest
 3.Ankit Parte
 4.Vikram
 5.Golla Mahesh Kumar
+
+
+local storage key = CurrProdDesc
