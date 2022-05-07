@@ -368,6 +368,7 @@ function Displayproduct(prodS) {
       div.addEventListener("click", function () {
         AddCurrProd(prod);
         localStorage.setItem("CurrProdDesc", JSON.stringify(prod));
+        window.location.href="../description/description.html"
       });
     }
   });
@@ -415,7 +416,7 @@ function display(data) {
     card.addEventListener("click", function () {
       AddCurrProd(ele);
       localStorage.setItem("CurrProdDesc", JSON.stringify(ele));
-      window.location.href = "description.html";
+      window.location.href = "../description/description.html";
     });
   });
 }
@@ -447,5 +448,5 @@ function addToCart(product) {
 }
 
 document.querySelector("#headcartSpan").addEventListener("click", function () {
-  window.location.href = "./cart/cart.html";
+  window.location.href = "../cart/cart.html";
 });
