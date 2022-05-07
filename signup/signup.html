@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | Gearbest.com</title>
+    <link rel="icon" href="https://www.gearbest.com/favicon.ico">
+    <link rel="stylesheet" href="signup.css">
+    <!-- <style>
+        *{
+            font-family: sans-serif;
+        }
+        #parent{
+            width: 90%;
+            height: auto;
+            margin: auto;
+            padding: 15px;
+        }
+        #parent>div{
+            width: 18%;
+        }
+        #parent>div>img{
+            width: 95%;
+        }
+        #parent2{
+           
+            width: 90%;
+            height: auto;
+            margin: auto;
+            display: flex;
+            justify-content: right;
+            margin-top: 50px;
+            
+        }
+        #form{
+            /* border: 1px solid black; */
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 10px;
+            width: 33%;
+            height: 400px;
+            
+        }
+        #sign{
+            display: flex;
+            width: 95%;
+            margin: 20px auto;
+            padding: 5px;
+        }
+        #sign>div{
+            display: flex;
+            width: 50%;
+            justify-content: space-between;
+            margin-left: 15px;
+        }
+        #email,#password,#submit{
+            display: block;
+            width: 80%;
+            margin: 20px auto;
+            padding: 10px;
+
+        }
+        #email,#password{
+            border: 1px solid rgb(224,224,224);
+        }
+        #submit{
+            width: 85%;
+            font-weight: bold;
+            font-size: large;
+            border: 0;
+            background-color: #FFDA00;
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+
+        }
+        #forgot{
+            display: flex;
+            width: 88%;
+            margin: 10px auto;
+            padding: 2px;
+            
+            
+        }
+        #forgot>div{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            /* padding: 10px; */
+        }
+        #forgot>div>div{
+            font-size: 13px;
+        }
+        .para{
+            text-align: center;
+        }
+        #connect>div{
+            width: 10%;
+            margin: auto;
+            border: 1px solid rgb(223, 209, 209);
+            border-radius: 50%;
+
+        }
+        #connect>div>img{
+            width: 100%;
+            margin: auto;
+            border-radius: 50%;
+            margin-top: 3px;
+        }
+        #sign>div>div{
+            font-weight: bold;
+        }
+        #sign>div>div+div{
+            color: rgb(186,186,192);
+        }
+        #checkbox{
+            cursor: pointer;
+            border-color: #01a982;
+        }
+        .div2>a{
+            text-decoration: none;
+            color: rgb(163, 160, 160);
+            text-decoration: underline;
+        }
+        .signin{
+            /* text-decoration: underline yellow;
+            text-underline-offset: 2px; */
+            /* Increase this as per requirement */
+            padding-bottom: 10px;
+            border-bottom-style: solid ;
+            border-bottom-width: 4.1px;
+            width: fit-content;
+            border-bottom-color: #FFDA00;
+        }
+        ::placeholder{
+            color:rgb(223, 209, 209) ;
+        }
+        /* input[type="checkbox"]{
+            font: inherit;
+            color: currentColor;
+            width: 1.15em;
+            height: 1.15em;
+            border: 0.15em solid currentColor;
+            border-radius: 0.15em;
+            transform: translateY(-0.075em);
+        } */
+        #bottom{
+            
+            width: 25%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 50px;
+            gap: 5px;
+            margin-top: 200px;
+            padding-left: 35px;
+        }
+        #bottom>img:nth-child(1){
+            width: 45%;
+        }
+        #bottom>img:nth-child(2){
+            width: 50%;
+        }
+        #bottom>img:nth-child(3){
+            width: 65%;
+        }
+        .footer{
+            text-align: center;
+            color: rgb(186,186,192);
+            font-size: 13px;
+            margin-top: -10px;
+        }
+        
+    </style> -->
+</head>
+<body>
+    <div id="parent">
+        <div>
+            <img class="homepage" onmouseenter="activate(this)" src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true" alt="">
+        </div>
+    </div>
+    <div id="parent2">
+        <form id="form">
+            <div id="sign">
+                <div>
+                    <div class="signin" onmouseenter="activate(this)" >SIGN IN</div>
+                    <div class="register" onmouseenter="activate(this)">REGISTER</div>
+                </div>
+            </div>
+            <input type="text" id="email" placeholder="Email">
+            <input type="text" id="password" placeholder="Password">
+            <div id="forgot">
+                <div>
+                    <div class="div1"><input type="checkbox" name="" id="checkbox"><span>Keep me signed in</span></div>
+                    <div class="div2"><a href="blank">Forgot you password?</a></div>
+                </div>
+            </div>
+            <input type="submit" value="Sign In" id="submit">
+            <div id="connect">
+                <p class="para">or connect via</p>
+                <div><img src="data:image/png;base64,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" alt="">
+                </div>   
+            </div>
+        </form>
+    </div>
+    <div id="bottom">
+        <img src="https://css.gbtcdn.com/imagecache/gbw/img/site/money_back2@.png" alt="">
+        <img src="https://css.gbtcdn.com/imagecache/gbw/img/site/mcafee_secure@.png" alt="">
+        <img src="https://css.gbtcdn.com/imagecache/gbw/img/site/paypal@.png" alt="">
+    </div>
+    <p class="footer">Copyright © 2014-2021 Gearbest.com. All Rights Reserved.</p>
+</body>
+</html>
+
+<!-- <script>
+
+
+    function activate(x){
+        x.style.cursor="pointer";
+    }
+    function sign(){
+        window.location.href="signup.html";
+    }
+    function regis(){
+        window.location.href="register.html";
+    }
+
+    var sig=document.querySelector(".signin");
+     sig.addEventListener("click",sign);
+    var regi=document.querySelector(".register");
+     regi.addEventListener("click",regis);
+
+
+    var form=document.querySelector("#form");
+    form.addEventListener("submit",signin);
+
+    var accounts=JSON.parse(localStorage.getItem("account")) || [];
+
+    function signin(){
+        event.preventDefault();
+
+        var email = document.querySelector("#email").value;
+        var password = document.querySelector("#password").value;
+
+        console.log(email,password);
+
+
+        var checker = -1;
+        
+        accounts.forEach(function(elem){
+            var identity=elem.email;
+            var pass = elem.password;
+            if(identity==email && pass == password){
+                checker = 1;
+            }
+            else if(identity == email || pass == password){
+                checker = 0; 
+            }
+            // else {
+            //     checker = 2;
+            // }
+        })
+
+        if (checker==1){
+            alert("login successful");
+        }
+        else if(checker==0){
+            alert("please enter all valid credentials");
+        }
+        // else{
+        //     alert("please create an account");
+        // }
+
+        if(checker == -1){
+            alert("Create an account please");
+            window.location.href="register.html"
+            
+        }
+
+        const inputs = document.querySelectorAll("#email , #password");
+
+        inputs.forEach(input => {input.value = "";})
+
+       
+
+
+    }
+</script> -->
+<script src="signup.js"></script>
