@@ -427,7 +427,7 @@ function display(data){
 
 let cart = JSON.parse(localStorage.getItem("cart"));
 
-document.querySelector("#cartCount").innerText = cart.length;
+document.querySelector("#cartCount").innerText = 0;
 
 
 function addToCart(product) {
@@ -453,6 +453,11 @@ function addToCart(product) {
   }
   
 }
+
+
+document.querySelector("#headcartSpan").addEventListener("click",function(){
+  window.location.href="../cart/cart.html";
+})
 
 
 
