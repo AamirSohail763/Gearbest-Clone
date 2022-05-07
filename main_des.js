@@ -104,11 +104,22 @@ var atc = document.querySelector('#atc');
 
 var count = document.querySelector('#count');
 count.innerHTML = cartinfo.length;
+
 atc.addEventListener('click',function(){
-      window.location.reload();
-      arr['0']['tp'] = tp.innerHTML;
-      cartinfo.push(arr);
-      localStorage.setItem('cart',JSON.stringify(cartinfo))
+      var n = 0;
+      for (var i = 0; i<cartinfo.length;i++){
+            if (cartinfo[i].img===arr[0].img && cartinfo[i].mrp==arr[0].mrp){
+                  n++;
+                  alert("Product already Exists");
+            }
+      }
+      if (n==0){
+            window.location.reload();
+            arr[0].tp = tp.innerHTML;
+            console.log(arr)
+            localStorage.setItem('cart',JSON.stringify(arr))
+      }
+      
 })
 
 // Buy now even Listener 
@@ -116,10 +127,13 @@ atc.addEventListener('click',function(){
 var buyNow = document.querySelector('#buyNow');
 
 buyNow.addEventListener('click',function(){
-      arr['0']['tp'] = tp.innerHTML;
-      cartinfo.push(arr);
-      localStorage.setItem('AddToCart',JSON.stringify(cartinfo))
+      arr[0].tp = tp.innerHTML;
+      localStorage.setItem('AddToCart',JSON.stringify(arr))
       window.location.href = "" // cart page link;
 })
 
-// localStorage.setItem('CurrProdDesc',JSON.stringify(arr))
+
+// localStorage.removeItem("cart")
+
+
+

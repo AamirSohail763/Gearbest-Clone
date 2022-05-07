@@ -36,6 +36,7 @@ var arrProduct = [
             OFF`,
             discount : '55',
             store: "Nimble Tech Store",
+            tp : '1',    
             smallImg : [
                   {
                         img1 : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16499/goods_img_big-v5/1ce06b8b92c8.jpg',
@@ -44,7 +45,7 @@ var arrProduct = [
                         img4 : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16499/goods_img_big-v5/890f3500526e.jpg',
                         img5 : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16499/goods_img_big-v5/bf3f69aeaa7b.jpg'
                   }
-                ]
+                ],
       },
 
       {
@@ -54,6 +55,7 @@ var arrProduct = [
             strikeoff : '283',
             dis : `60%
             OFF`,
+            tp : '1',    
             discount : '60',
             store: "Top Rate Store",
             smallImg : [
@@ -64,7 +66,7 @@ var arrProduct = [
                         img4 : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16473/goods_img_big-v1/66ebea0f343d.jpg',
                         img5 : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16473/goods_img_big-v1/ec8e88580f17.jpg'
                   }
-                ]
+                ],
       },
 
 
@@ -76,6 +78,7 @@ var arrProduct = [
             dis : `50%
             OFF`,
             discount : '50',
+            tp : '1',
             store: "Nimble Tech Store",
             smallImg : [
                   {
@@ -85,7 +88,7 @@ var arrProduct = [
                         img4 : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16488/goods_img_big-v1/ad3742e24a36.jpg',
                         img5 : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16488/goods_img_big-v1/3c02cce7a885.jpg'
                   }
-                ]
+                ],
       },
 
       {
@@ -95,6 +98,7 @@ var arrProduct = [
             strikeoff : "290",
             dis : `55%
             OFF`,
+            tp : '1',
             discount : '55',
             store: "Top Rate Store",
             smallImg : [
@@ -105,7 +109,7 @@ var arrProduct = [
                         img4 : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16485/goods_img_big-v1/736afcc9917e.jpg',
                         img5 : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16485/goods_img_big-v1/280bdd7ea27f.jpg'
                   }
-                ]
+                ],
       },
 
       {
@@ -115,6 +119,7 @@ var arrProduct = [
             strikeoff : '345',
             dis : `62%
             OFF`,
+            tp : '1',
             discount : '62',
             store: "Nimble Tech Store",
             smallImg : [
@@ -125,7 +130,7 @@ var arrProduct = [
                         img4 : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16504/goods_img_big-v3/ae6b45403a32.jpg',
                         img5 : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16504/goods_img_big-v3/4530049801e5.jpg'
                   }
-                ]
+                ],
       },
 
 ]
@@ -236,7 +241,8 @@ var arrSuggestion = [
                         img4 : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16485/goods_img_big-v1/736afcc9917e.jpg',
                         img5 : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16485/goods_img_big-v1/280bdd7ea27f.jpg'
                   }
-                ]
+                ],
+                tp : '1',    
       },
 
       {
@@ -256,7 +262,8 @@ var arrSuggestion = [
                         img4 : 'https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16455/goods_img_big-v1/57e9602de747.jpg',
                         img5 : 'https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16455/goods_img_big-v1/9f6a7c2c1ea7.jpg'
                   }
-                ]
+                ],
+            tp : '1',    
       },
 
       {
@@ -276,7 +283,8 @@ var arrSuggestion = [
                         img4 : 'https://gloimg.gbtcdn.com/soa/gb/item/6878024886355423232/16464/goods_img_big-v1/7b06bfae0717.jpg',
                         img5 : 'https://gloimg.gbtcdn.com/soa/gb/item/6878024886355423232/16464/goods_img_big-v1/b3ff91bbdf39.jpg',
                   }
-                ]
+                ],
+            tp : '1',
       },
 
       {
@@ -296,7 +304,8 @@ var arrSuggestion = [
                         img4 : 'https://gloimg.gbtcdn.com/soa/gb/item/6898341271098814464/16468/goods_img_big-v3/8a2eb0f87d6a.jpg',
                         img5 : 'https://gloimg.gbtcdn.com/soa/gb/item/6898341271098814464/16468/goods_img_big-v3/a2a3b9348010.jpg'
                   }
-                ]
+                ],
+            tp : '1',
       },
 
       {
@@ -316,7 +325,8 @@ var arrSuggestion = [
                         img4 : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16462/goods_img_big-v2/9547734f43ae.jpg',
                         img5 : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16462/goods_img_big-v2/7ca87c8182d7.jpg'
                   }
-                ]
+                ],
+            
       }
 ]
 var suggestion = document.querySelector('#suggestion')
@@ -398,9 +408,25 @@ arrSuggestion.forEach(function(el){
       })
 })
 // console.log(arrProduct)
-var atc = JSON.parse(localStorage.getItem('cart')) || []
+var acc = JSON.parse(localStorage.getItem('cart')) || []
+// localStorage.removeItem('cart')
 
 function addCart(el){
-      atc.push(el);
-      localStorage.setItem('cart',JSON.stringify(arr))
+      var n = 0;
+      for (var i = 0; i<acc.length; i++){
+            if (el.img==acc[i].img){
+                  n++;
+                  alert('Product alreay Excits');
+                  // break;
+            }
+      }
+      // console.log(n)
+      if (n==0){
+            console.log(n)
+            acc.push(el);
+            localStorage.setItem('cart',JSON.stringify(acc))
+            window.location.reload();
+      }
+      console.log(acc)
+      
 }
