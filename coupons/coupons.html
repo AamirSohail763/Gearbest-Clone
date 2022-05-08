@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gearbest coupon centre free...</title>
+    <link rel="icon" href="https://www.gearbest.com/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="stylesheet" href="coupons.css">
+</head>
+<style>
+    *{
+        padding: 0%;
+        margin: 0%;
+        font-family: sans-serif;
+        /* background-color: aliceblue; */
+    }
+    #coupon>img{
+        width: 100%;
+        height: 180px;
+    }
+    #pair{
+        width: 70%;
+        margin: auto;
+    }
+    #grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 250px;
+        gap: 15px;
+        margin-top: -80px;
+    }
+    #grid>div{
+        /* border: 1px solid black; */
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;    
+    }    
+    #grid>div>div:nth-child(1){
+        width: 97%;
+        height: 40px;
+        background-color: rgb(255,218,0);
+        border-bottom: 2px dashed white;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        padding: 5px;
+    }
+    #grid>div>div:nth-child(2){
+        background-color: white;
+        width: 100%;
+        height: 190px;
+        /* display: flex; */
+        /* align-items: flex-start; */
+        /* justify-content: center; */
+    }
+    #grid>div>div:nth-child(2)>div>button{
+        /* padding: 10px 50px 10px 50px; */
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(255,218,0);
+        margin: auto;
+        margin-top: 145px;
+        font-size: 11px;
+        font-weight: bold;
+        
+    }
+    #grid>div>div:nth-child(2)>div{
+        width: 40%;
+        margin: auto;
+    }
+    #grid>div>div:nth-child(1)>p:nth-child(1){
+        font-weight: bold;
+        margin-left: 8px;
+    }
+    #grid>div>div:nth-child(1)>p:nth-child(2){
+        font-size: 12px;
+        margin-left: 8px;
+    }
+    #h2O{
+        width: 70%;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #pair2{
+        margin: auto;
+        height: 50px;
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5px;
+        background-color: whitesmoke;
+        font-size: 12px;
+        font-weight: bold;
+        color: rgb(102,102,102);
+        cursor: pointer;
+    }
+    .one{
+            padding-bottom: 10px;
+            border-bottom-style: solid ;
+            border-bottom-width: 4.1px;
+            width: fit-content;
+            border-bottom-color: #FFDA00;
+    }
+    #pair3{
+        width: 70%;
+        margin: auto;
+        font-size: 10px;
+        font-weight: 700;
+        color: black;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #pair3>span+span{
+        margin-left: 15px;
+    }
+
+    
+</style>
+<body>
+    <div class="headShortcut">
+        <div id="invisible2"><i id="mobileIcon" class="fa-solid fa-mobile-screen-button"></i><span>Save $3 with App
+            <div id="H_appInfo">
+                <div>Download App!</div>
+                <p>Save $3 with App & New User Only</p>
+                <div id="H_appImages">
+                    <img src="https://c1.img2qr.com/images/simple_qrcode.png?x-oss-process=image/quality,Q_80">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png">
+                </div>
+            </div>
+        </span><i class="fa-solid fa-angle-down"></i></div>
+        <div><span id="supportText">Support Center</span></div>
+        <div><span class="headOption">Ship to</span><i class="fa-solid fa-angle-down"></i></div>
+        <div><span class="headOption">Language</span><i class="fa-solid fa-angle-down"></i></div>
+        <div><span class="headOption">Country Website</span><i class="fa-solid fa-angle-down"></i></div>
+    </div>
+
+    <div class="headEntries">
+        <a href="../index.html"><img  id="logo" src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true"></a>
+        <div id="searchDiv">
+            <span>&nbsp;&nbsp;&nbsp;All&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <input id="headSearchBox" type="text">
+            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div id="headEntries_user">
+            <i class="fa-regular fa-user"></i>
+            <div id="headsignInSpan">Sign In
+                <div id="invisible">
+                    <p>Welcome to Gearbest</p>
+                    <a href="../signup/signup.html">Sign In</a>
+                    <div id="invisibleInner">
+                        <span>or connect via</span>
+                        <img src="https://bookassist.org/wp-content/uploads/elementor/thumbs/google-logo-pahn4ktunr3f9dmhvb0zbr0d3jczu21k3leynx4yts.jpg" alt="">
+                    </div>
+                    <p>Register on Gearbest</p>
+                    <button id="signupBtn">Register</button>
+                </div>
+            </div>
+            <i class="fa-regular fa-heart"></i><span id="headfavSpan">Favourites</span>
+            <i class="fa-solid fa-cart-shopping"></i><span id="headcartSpan"></i>Cart</span>
+        </div>
+    </div>
+
+    <div id="headNav">
+        <span id="headNav_cat" class="headNav_itemLink">Category</span>
+        <li class="headNav_item headCoupon" ><a class="headNav_itemLink headCoupon" href="../coupons/coupons.html">COUPON</a></li>
+        <li class="headNav_item"><a class="headNav_itemLink" href="../super_deal/super_deal.html">SUPER DEALS</a></li>
+        <li class="headNav_item"><a class="headNav_itemLink" href="">APP ONLY</a></li>
+        <li class="headNav_item"><a class="headNav_itemLink" href="">NEW ARRIVALS</a></li>
+    </div>
+    <!-- the above navbar code is done by anothr group member -->
+    <div id="coupon">
+        <img src="https://uidesign.gbtcdn.com/GB/image/3751/coupona.jpg?imbypass=true" alt="">
+        <!-- <div class="couponIndex_banner" style="background-image: url();"> </div> -->
+    </div>
+    <div id="pair">
+        <div id="grid">
+            <div>
+                <div>
+                    <p>$10.00</p>
+                    <p>$10.00 off over $100.00</p>
+                </div>
+                <div>
+                    <div>
+                        <button>Get It Now</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>$5.00</p>
+                    <p>$5.00 off over $50.00</p>
+                </div>
+                <div>
+                    <div>
+                        <button>Get It Now</button>
+                    </div>
+                </div> 
+            </div>
+            <div>
+                <div>
+                    <p>$3.00</p>
+                    <p>$3.00 off over $30.00</p>
+                </div>
+                <div>
+                    <div>
+                        <button>Get It Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 id="h2O">Coupon code</h2>
+    <div id="pair2">
+        
+        <span class="one">All</span>
+        <span>Consumer Electronics</span>
+        <span>3D printers</span>
+        <span>light and lightings</span>
+        <span>office supplies</span>
+        <span>healthcare</span>
+        <span>Home Improvementand & tools</span>
+        
+    </div>
+    <div id="pair3">
+        <span>Sort by:</span>
+        <span>Recommend</span>
+        <span>Hottest</span>
+        <span class="price">Price</span>
+        <span class="disc">Discount</span>
+    </div>
+
+    <div id="oyaji">
+        <!-- from her the thing is created by js -->
+    </div>
+    <!-- below code is done by other team members -->
+    <div id="F_mainDiv">
+        <p id="F_firstSpan">Popular Searches:</p>
+        <div id="F_popularDiv">
+            <p>realme buds q</p>
+            <p>xiaomi redmi 7 case</p>
+            <p>lenovo lp1s tws</p>
+            <p>5g phone</p>
+            <p>projector 4k</p>
+            <p>men's sports shoes</p>
+            <p>creality ender 3</p>
+            <p>xiaomi mi band 5</p>
+            <p>led light strip</p>
+            <p>360 s7 robot vacuum cleaner</p>
+            <p>amazfit gts 2</p>
+            <p>roborock s7 max</p>
+            <p>xiaomi vacuum</p>
+            <p>poco x3 nfc</p>
+        </div>
+    </div>
+    <div id="F_logoDiv">
+        <div id="F_logoDiv1">
+            <img src="https://css.gbtcdn.com/imagecache/gbw/img/site/new-logo.png">
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AFFORDABLE QUALITY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FUN SHOPPING</h3>
+        </div>
+        <div id="F_logoDiv2">
+            <i class="fa-solid fa-house-circle-check"></i>
+            <strong>High Quality Selection</strong>
+            <div>Total product quality control for peace of mind</div>
+        </div>
+        <div id="F_logoDiv3">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <strong>Affordable Prices</strong>
+            <div>Factory direct prices for maximum savings</div>
+        </div>
+        <div id="F_logoDiv4">
+            <i class="fa-solid fa-truck"></i>
+            <strong>Express Shipping</strong>
+            <div>Fast, reliable delivery from global warehouses</div>
+        </div>
+        <div id="F_logoDiv5">
+            <i class="fa-solid fa-star"></i>
+            <strong>Worry-free After-sales</strong>
+            <div>instant access to professional support</div>
+        </div>
+    </div>
+    
+    <div id="F_secondDiv">
+        <form>
+            <span>Newsletter</span>
+            <input type="email" id="F_emailForm" placeholder="Enter Email to get 50 Points">
+            <input type="submit" value="Subscribe" id="F_submitBTN">
+        </form>
+    
+        <div id="F_socialsDiv">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-facebook-messenger"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-vk"></i>
+            <i class="fa-brands fa-instagram-square"></i>
+            <i class="fa-brands fa-twitter-square"></i>
+            <i class="fa-solid fa-blog"></i>
+            <i class="fa-brands fa-tumblr-square"></i>
+        </div>
+    </div>
+    
+    <div id="F_lastDiv">
+        <dl>
+            <dt class="F_dtTitle">Company Information</dt>
+            <dd>About Us</dd>
+            <dd>Top Searches</dd>
+            <dd>Privacy Policy</dd>
+            <dd>Terms and Conditions</dd>
+            <dd>Intellectual Property Policy</dd>
+            <dd>Testimonials</dd>
+            <dd>Contact Us</dd>
+            <dd>Report Security Issue</dd>
+            <dd>Sell on Gearbest</dd>
+            <dd>Cookies Policy</dd>
+            <dd>Top Brands</dd>
+            <dd>Gearbest Official Blog</dd>
+        </dl>
+    
+        <dl>
+            <dt class="F_dtTitle">Customer Service</dt>
+            <dd>Shipping Information</dd>
+            <dd>My Favourites</dd>
+            <dd>FAQ for Newsletter</dd>
+            <dd>My Points</dd>
+            <dd>Warrenty and Return</dd>
+            <dd>Payment Methods</dd>
+            <dd>Deposit Expansion</dd>
+            <dd>FAQ & Support</dd>
+            <dd>Sitemap</dd>
+            <dd>Gearbest Wallet</dd>
+            <dd>FAQs about COVID-19</dd>
+        </dl>
+    
+        <dl>
+            <dt class="F_dtTitle">Other Business</dt>
+            <dd>Partnership Programs</dd>
+            <dd>Associate Program</dd>
+        </dl>
+    
+        <div id="F_appInfo">
+            <div>Download App!</div>
+            <p>Save $3 with App & New User Only</p>
+            <div id="F_appImages">
+                <img src="https://c1.img2qr.com/images/simple_qrcode.png?x-oss-process=image/quality,Q_80" alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png" alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <div id="F_miniLogo">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/money.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/m.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/rese.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/paypal.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/visa.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/a.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/ww.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/jcb.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/dic.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/ya.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/d.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/qiwi.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/oxxo.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/webmoney.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/bo.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/postepay.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/giropay.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/sofort.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/eps.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/p.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/pago.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/others/20190222_7819/Visa-Logo.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/others/20190222_7819/m-Logo.png">
+    </div>
+    <p id="F_copyrightP">Copyright © 2014-2021 Gearbest.com. All Rights Reserved.</p>
+</body>
+</html>
+<script src="coupons.js"></script>

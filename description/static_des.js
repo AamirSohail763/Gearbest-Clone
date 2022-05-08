@@ -398,23 +398,41 @@ arrSuggestion.forEach(function(el){
 var acc = JSON.parse(localStorage.getItem('cart')) || []
 // localStorage.removeItem('cart')
 
-function addCart(el){
-      var n = 0;
-      for (var i = 0; i<acc.length; i++){
-            if (el.img==acc[i].img){
-                  n++;
-                  alert('Product alreay Excits');
-                  // break;
+function addCart(obj){
+      flag = false;
+      acc.forEach(function(el){
+            if(el.name == obj.name){
+                  flag = true;
             }
+      });
+
+      if(!flag){
+            acc.push(obj);
+            count.innerHTML = acc.length;
+            localStorage.setItem("cart",JSON.stringify(acc));
+
+      }else{
+            alert("Product already Exists");
       }
-      // console.log(n)
-      if (n==0){
-            console.log(n)
-            acc.push(el);
-            localStorage.setItem('cart',JSON.stringify(acc))
-            window.location.reload();
-      }
-      console.log(acc)
+
+
+
+      // var n = 0;
+      // for (var i = 0; i<acc.length; i++){
+      //       if (el.img==acc[i].img){
+      //             n++;
+      //             alert('Product alreay Excits');
+      //             // break;
+      //       }
+      // }
+      // // console.log(n)
+      // if (n==0){
+      //       console.log(n)
+      //       acc.push(el);
+      //       localStorage.setItem('cart',JSON.stringify(acc))
+      //       window.location.reload();
+      // }
+      // console.log(acc)
       
 }
 

@@ -1,0 +1,582 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #FAFAFA;
+}
+#F_mainDiv{
+    background-color: white;
+    height: 160px;
+    width: 100%;
+    position: relative;
+}
+#F_firstSpan{
+    font-size: 14px;
+    display: inline;
+    position: absolute;
+    left: 8%;
+    top: 21%;
+
+}
+#F_popularDiv{
+    font-size: 14px;
+    line-height: 16px;
+    /* text-decoration: none; */
+    word-spacing: 0px;
+
+    background-color: white;
+    color: black;
+    height: 60px;
+    width: 1050px;
+    margin: 0 161px 0 161px;
+    cursor: default;
+    justify-self: right;
+    position: absolute;
+    left: 6%;
+    top: 20%;
+
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+#F_popularDiv p{
+    margin: 5px 15px 5px 15px;
+}
+#F_popularDiv p:hover{
+    text-decoration: underline;
+
+}
+#F_logoDiv{
+    background-color: white;
+    color: black;
+    height: 102.11px;
+    width: 1175px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 24px 0 30px 0;
+    display: block;
+    /* border: 1px dashed blue; */
+}
+#F_logoDiv1{
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+    height: 102px;
+    width: 200px;
+    padding: 0 70px 0 70px;
+    display: inline-block;
+    cursor: pointer;
+}
+#F_logoDiv1 img{
+    height: 43.47px;
+    width: 200px;
+    margin: 10px 0 10px 0;
+    cursor: pointer;
+}
+#F_logoDiv1 h3{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    height: 35.97px;
+    width: 200px;
+    cursor: pointer;
+}
+#F_logoDiv2{
+    /* background-color: aqua; */
+    text-align: center;
+    vertical-align: top;
+    height: 101.66px;
+    width: 157.98px;
+    margin: 0 18px 0 18px;
+    display: inline-block;
+    cursor: default;
+}
+#F_logoDiv2 i{
+    font-size: 2em;
+    padding: 5%;
+    margin-left: 40%;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+#F_logoDiv2 i:hover{
+    color: #FFDA00;
+}
+#F_logoDiv2 strong{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: center;
+    height: auto;
+    width: auto;
+    display: inline;
+    cursor: default;
+}
+#F_logoDiv2 strong:hover{
+    color: #FFDA00;
+}
+#F_logoDiv2 div{
+    font-size: 12px;
+    /* font-weight: bold; */
+    line-height: 15px;
+    text-align: center;
+    color: #666666;
+    height: 30px;
+    width: 157.98px;
+    display: block;
+    cursor: default;
+}
+
+#F_logoDiv3{
+    /* background-color: violet; */
+    text-align: center;
+    vertical-align: top;
+    height: 101.66px;
+    width: 157.98px;
+    margin: 0 18px 0 18px;
+    display: inline-block;
+    cursor: default;
+}
+#F_logoDiv3 i{
+    font-size: 2em;
+    padding: 5%;
+    margin-left: 40%;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+#F_logoDiv3 i:hover{
+    color: #FFDA00;
+}
+#F_logoDiv3 strong{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: center;
+    height: auto;
+    width: auto;
+    display: inline;
+    cursor: default;
+}
+#F_logoDiv3 strong:hover{
+    color: #FFDA00;
+}
+#F_logoDiv3 div{
+    font-size: 12px;
+    /* font-weight: bold; */
+    line-height: 15px;
+    text-align: center;
+    color: #666666;
+    height: 30px;
+    width: 157.98px;
+    display: block;
+    cursor: default;
+}
+#F_logoDiv4{
+    /* background-color: coral; */
+    text-align: center;
+    vertical-align: top;
+    height: 101.66px;
+    width: 157.98px;
+    margin: 0 18px 0 18px;
+    display: inline-block;
+    cursor: default;
+}
+#F_logoDiv4 i{
+    font-size: 2em;
+    padding: 5%;
+    margin-left: 40%;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+#F_logoDiv4 i:hover{
+    color: #FFDA00;
+}
+#F_logoDiv4 strong{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: center;
+    height: auto;
+    width: auto;
+    display: inline;
+    cursor: default;
+}
+#F_logoDiv4 strong:hover{
+    color: #FFDA00;
+}
+#F_logoDiv4 div{
+    font-size: 12px;
+    /* font-weight: bold; */
+    line-height: 15px;
+    text-align: center;
+    color: #666666;
+    height: 30px;
+    width: 157.98px;
+    display: block;
+    cursor: default;
+}
+#F_logoDiv5{
+    /* background-color: cornflowerblue; */
+    text-align: center;
+    vertical-align: top;
+    height: 101.66px;
+    width: 157.98px;
+    margin: 0 18px 0 18px;
+    display: inline-block;
+    cursor: default;
+}
+#F_logoDiv5 i{
+    font-size: 2em;
+    padding: 5%;
+    margin-left: 40%;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+#F_logoDiv5 i:hover{
+    color: #FFDA00;
+}
+#F_logoDiv5 strong{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: center;
+    height: auto;
+    width: auto;
+    display: inline;
+    cursor: default;
+}
+#F_logoDiv5 strong:hover{
+    color: #FFDA00;
+}
+#F_logoDiv5 div{
+    font-size: 12px;
+    /* font-weight: bold; */
+    line-height: 15px;
+    text-align: center;
+    color: #666666;
+    height: 30px;
+    width: 157.98px;
+    display: block;
+    cursor: default;
+}
+form{
+    /* border: 1px dashed teal; */
+    height: 40px;
+    width: 615px;
+    display: block;
+    /* margin: 40px 0 0 80px; */
+    float: left;
+}
+form span{
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 14px;
+    vertical-align: middle;
+    color: #666666;
+    height: 13.99px;
+    width: 77.93px;
+    margin: 0 10px 0 0;
+    /* display: inline-block; */
+}
+#F_emailForm{
+    font-size: 14px;
+    line-height: 16px;
+    height: 32px;
+    width: 285px;
+    border: 1px solid #666666;
+    padding: 3px 6px 3px 6px;
+    cursor: text;
+}
+#F_submitBTN{
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    /* vertical-align: middle; */
+    background-color: black;
+    color: white;
+    height: 41px;
+    width: 120px;
+    margin: 0 0 0 -5px;
+    padding: 1px 6px 1px 6px;
+}
+#F_secondDiv{
+    /* border: 1px dashed purple; */
+    width: 1175px;
+    height: 40px;
+    margin: auto;
+    margin-top: 50px;
+}
+#F_socialsDiv{
+    text-align: right;
+    height: 32px;
+    width: 550px;
+    float: right;
+    display: flex;
+    /* border: 1px dashed aqua; */
+    justify-content: space-around;
+    align-items: flex-end;
+}
+#F_socialsDiv i{
+    font-size: 1.5em;
+    color: #464646;
+}
+#F_socialsDiv :nth-child(1):hover{
+    color: #3B5998;
+}
+#F_socialsDiv :nth-child(2):hover{
+    color: #0193FF;
+}
+#F_socialsDiv :nth-child(3):hover{
+    color: #FF0000;
+}
+#F_socialsDiv :nth-child(4):hover{
+    color: #CB2027;
+}
+#F_socialsDiv :nth-child(5):hover{
+    color: #6383A8;
+}
+#F_socialsDiv :nth-child(6):hover{
+    color: #ff01b3;
+}
+#F_socialsDiv :nth-child(7):hover{
+    color: #1DA1F2;
+}
+#F_socialsDiv :nth-child(8):hover{
+    color: #FFDA00;
+}
+#F_socialsDiv :nth-child(9):hover{
+    color: #37455C;
+}
+#F_lastDiv{
+    /* border: 1px dashed orangered; */
+    height: 264px;
+    width: 1175px;
+    margin: auto;
+    padding: 50px 30px;
+    position: relative;
+
+}
+#F_lastDiv dl{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 85px;
+    width: 220px;
+}
+.F_dtTitle{
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 14px;
+    color: black;
+    height: 13.99px;
+    width: 220px;
+    padding: 0 0 10px 0;
+    display: block;
+    list-style-type: disc;
+    list-style-position: outside;
+}
+#F_lastDiv dd{
+    font-size: 12px;
+    line-height: 20px;
+    color: #464646;
+    height: auto;
+    width: auto;
+    display: block;
+    cursor: pointer;
+}
+#F_lastDiv dd:hover{
+    text-decoration: underline;
+}
+#F_appInfo{
+    height: 163px;
+    width: 242px;
+    display: block;
+    /* border: 1px dashed olive; */
+    position: absolute;
+    top: 15%;
+    right: 5%;
+}
+#F_appInfo :nth-child(1){
+    font-size: 14px;
+    line-height: 18px;
+    height: 18px;
+    width: 242px;
+    margin: 0 0 5px 0;
+    display: block;
+    /* border: 1px dashed pink; */
+    color: black;
+    font-weight: bolder;
+}
+#F_appInfo p{
+    font-size: 12px;
+    line-height: 20px;
+    color: black;
+    height: 20px;
+    width: 242px;
+    margin: 5px 0 5px 0;
+    display: -webkit-box;
+}
+#F_appImages{
+    height: 100px;
+    width: 126px;
+    margin: 15px 0 0 0;
+    padding: 0 0 5px 116px;
+    display: flex;
+    /* border: 1px dashed teal; */
+    position: relative;
+}
+#F_appImages :nth-child(1){
+    display: block;
+    height: 105px;
+    width: 105px;
+    position: absolute;
+    top: 0;
+    left: 0%;
+}
+#F_appImages :nth-child(2){
+    display: block;
+    height: 50px;
+    width: 138px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#F_appImages :nth-child(3){
+    display: block;
+    height: 50px;
+    width: 138px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#F_miniLogo{
+    height: 74px;
+    width: 1175px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#F_miniLogo img{
+    cursor: default;
+    display: inline;
+    margin-right: 20px;
+}
+#F_miniLogo :nth-child(1){
+    height: 27px;
+    width: 64.27px;
+}
+#F_miniLogo :nth-child(2){
+    height: 27px;
+    width: 64.27px;
+}
+#F_miniLogo :nth-child(3){
+    height: 27px;
+    width: 177px;
+}
+#F_miniLogo :nth-child(4){
+    height: 27px;
+    width: 40px;
+}
+#F_miniLogo :nth-child(5){
+    height: 27px;
+    width: 42px;
+}
+#F_miniLogo :nth-child(6){
+    height: 27px;
+    width: 42px;
+}
+#F_miniLogo :nth-child(7){
+    height: 27px;
+    width: 41px;
+}
+#F_miniLogo :nth-child(8){
+    height: 27px;
+    width: 42px;
+}
+#F_miniLogo :nth-child(9){
+    height: 27px;
+    width: 42px;
+}
+#F_miniLogo :nth-child(10){
+    height: 27px;
+    width: 48px;
+}
+#F_miniLogo :nth-child(11){
+    height: 27px;
+    width: 31px;
+}
+#F_miniLogo :nth-child(12){
+    height: 27px;
+    width: 50px;
+}
+#F_miniLogo :nth-child(13){
+    height: 27px;
+    width: 46px;
+}
+#F_miniLogo :nth-child(14){
+    height: 27px;
+    width: 102px;
+}
+#F_miniLogo :nth-child(15){
+    height: 27px;
+    width: 44px;
+}
+#F_miniLogo :nth-child(16){
+    height: 27px;
+    width: 44px;
+}
+#F_miniLogo :nth-child(17){
+    height: 27px;
+    width: 50px;
+}
+#F_miniLogo :nth-child(18){
+    height: 27px;
+    width: 50px;
+}
+#F_miniLogo :nth-child(19){
+    height: 27px;
+    width: 44px;
+}
+#F_miniLogo :nth-child(20){
+    height: 27px;
+    width: 60px;
+}
+#F_miniLogo :nth-child(21){
+    height: 27px;
+    width: 60px;
+}
+#F_miniLogo :nth-child(22){
+    height: 27px;
+    width: 27px;
+}
+#F_miniLogo :nth-child(23){
+    height: 27px;
+    width: 27px;
+}
+#F_copyrightP{
+    font-size: 12px;
+    line-height: 40px;
+    text-align: center;
+    background-color: black;
+    color: #E0E0E0;
+    height: 40px;
+    width: 100%;
+    margin-top: 50px;
+    display: block;
+}
+
