@@ -2,7 +2,7 @@ var homeimage = document.querySelector(".homepage");
 homeimage.addEventListener("click",homepage);
 
 function homepage(){
-    window.location.href="index.html";
+    window.location.href="../../index.html";
 }
 
 function activate(x){
@@ -40,7 +40,7 @@ function signin(){
         var identity=elem.email;
         var pass = elem.password;
         if(identity==email && pass == password){
-            
+            currAccount = localStorage.setItem("currAccount",JSON.stringify(elem));
             alert("login successful");
             empty();
             praise=0;

@@ -1,9 +1,10 @@
 // Getting User details from local storage
-userdata = JSON.parse(localStorage.getItem("account"));
+userdata = JSON.parse(localStorage.getItem("currAccount"));
 
 var signinStatus = document.getElementById("headsignInSpan");
 if (userdata != null) {
-  signinStatus.innerHTML = userdata.email;
+  username = userdata.email.split("@");
+  signinStatus.innerHTML = username[0];
   signinStatus.style.overflow = "hidden";
 }
 
@@ -331,6 +332,13 @@ let products = [
 ];
 // var currDescProd
 currDescProd = JSON.parse(localStorage.getItem("CurrProdDesc")) || [];
+ 
+// function (){
+
+//   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// }
+
 let bannerDiv = document.querySelector("#bannerDiv");
 // console.log(currDescProd);
 function Displayproduct(prodS) {
@@ -423,7 +431,7 @@ function display(data) {
 
 let cart = JSON.parse(localStorage.getItem("cart"));
 
-document.querySelector("#cartCount").innerText = 0;
+document.querySelector("#cartCount").innerText = cart.length;
 
 function addToCart(product) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];

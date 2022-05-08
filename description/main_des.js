@@ -1,19 +1,16 @@
-var obj = JSON.parse(localStorage.getItem('CurrProdDesc')) || {
-      img: "https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16455/goods_img_big-v1/d30e89bfb043.jpg",
-      name: "Pro Global Bands IP68&IPIP69K 8GB 128GB Helio G95 NFC Android 11 8500mAh 6.39 inch 48MP Round Quad Camera Octa Core 4G Smartphone",
-      mrp: "279",
-      discount: "30",
-      store: "Nimble Tech Store",
-      smallImg : [
-        {
-              img1 : 'https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16455/goods_img_big-v1/d30e89bfb043.jpg',
-              img2 : 'https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16455/goods_img_big-v1/d429b1e24825.jpg',
-              img3 : 'https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16455/goods_img_big-v1/ba5461996f94.jpg',
-              img4 : 'https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16455/goods_img_big-v1/fd0d575f9ccc.jpg',
-              img5 : 'https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16455/goods_img_big-v1/e196c195c7a2.jpg'
-        }
-      ]
-    }
+var obj = JSON.parse(localStorage.getItem('CurrProdDesc')) ;
+
+    userdata = JSON.parse(localStorage.getItem("currAccount"));
+if(!userdata){
+  window.location.href = "../index.html";
+}
+
+var signinStatus = document.getElementById("headsignInSpan");
+if (userdata != null) {
+  username = userdata.email.split("@");
+  signinStatus.innerHTML = username[0];
+  signinStatus.style.overflow = "hidden";
+}
 
 var arr = [];
 arr.push(obj);
@@ -106,19 +103,35 @@ var count = document.querySelector('#count');
 count.innerHTML = cartinfo.length;
 
 atc.addEventListener('click',function(){
-      var n = 0;
-      for (var i = 0; i<cartinfo.length;i++){
-            if (cartinfo[i].img===arr[0].img && cartinfo[i].mrp==arr[0].mrp){
-                  n++;
-                  alert("Product already Exists");
+      flag = false;
+      cartinfo.forEach(function(el){
+            if(el.name == obj.name){
+                  flag = true;
             }
+      });
+
+      if(!flag){
+            cartinfo.push(obj);
+            count.innerHTML = cartinfo.length;
+            localStorage.setItem("cart",JSON.stringify(cartinfo));
+
+      }else{
+            alert("Product already Exists");
       }
-      if (n==0){
-            window.location.reload();
-            arr[0].tp = tp.innerHTML;
-            console.log(arr)
-            localStorage.setItem('cart',JSON.stringify(arr))
-      }
+      // ----------------------old code for adding item into cart --------------------
+      // var n = 0;
+      // for (var i = 0; i<cartinfo.length;i++){
+      //       if (cartinfo[i].img===arr[0].img && cartinfo[i].mrp==arr[0].mrp){
+      //             n++;
+      //             alert("Product already Exists");
+      //       }
+      // }
+      // if (n==0){
+      //       window.location.reload();
+      //       arr[0].tp = tp.innerHTML;
+      //       console.log(arr)
+      //       localStorage.setItem('cart',JSON.stringify(arr))
+      // }
       
 })
 
@@ -129,7 +142,16 @@ var buyNow = document.querySelector('#buyNow');
 buyNow.addEventListener('click',function(){
       arr[0].tp = tp.innerHTML;
       localStorage.setItem('AddToCart',JSON.stringify(arr))
-      window.location.href = "" // cart page link;
+      window.location.href = "../cart/confirm.html" // cart page link;
+})
+
+
+// linking pages in nav bar
+
+headcartSpan = document.querySelector("#headcartSpan");
+
+headcartSpan.addEventListener('click',function(){
+      window.location.href = "../cart/cart.html";
 })
 
 

@@ -73,10 +73,8 @@
 
     height: 26px;
     width: 355px;
-    padding: 3px 0 3px 0;
-    border: none;
-    resize: none;
-    outline: none;
+    border: none; 
+    outline: none; 
 
 }
 #searchBtn{
@@ -222,10 +220,11 @@
     display: inline-block;
     cursor: pointer;
 }
-.headNav_itemLink:hover{
+.headNav_itemLink:hover,.active{
     text-decoration: underline 4px solid  #F2CE00;
     /* text-underline-offset: 4px; */
 }
+
 #invisible{
     font-size: 14px;
     line-height: 25px;

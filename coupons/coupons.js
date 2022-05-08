@@ -188,6 +188,16 @@ var allarray=[
 
 ]
 
+let curruser = JSON.parse(localStorage.getItem("currAccount"));
+if(!curruser){
+    window.location.href = "../index.html";
+}
+let headsignInSpan = document.querySelector("#headsignInSpan");
+userName = curruser.email.split("@")[0]
+headsignInSpan.innerHTML = "<p>"+userName+"</p>";
+
+
+
 allarray.map(function(elem){
     var divall = document.createElement("div");
     divall.setAttribute("id","allmight")
@@ -239,4 +249,12 @@ allarray.map(function(elem){
     divall.append(divone,divtwo);
 
     document.querySelector("#oyaji").append(divall);
+})
+
+// page linking part of nav bar
+
+signupBtn = document.querySelector("#signupBtn");
+
+signupBtn.addEventListener("click",function(){
+    window.location.href = "../signup/register.html";
 })
