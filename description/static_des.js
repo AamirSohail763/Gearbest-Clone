@@ -30,8 +30,7 @@ var arrProduct = [
       {
             img : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16499/goods_img-v5/3aef13f28d2e.jpg',
             name : "Global Version MI 11 Ultra 6.3 inch Smartphone 12Gb Cell Phone Unlocked 2022 5G Mobile Phones Cheap Android Xaiomi Telephone Xiomi - Gold 16G 512GB",
-            mrp : "115",
-            strikeoff : "257",
+            mrp : "257",
             dis : `55%
             OFF`,
             discount : '55',
@@ -51,8 +50,7 @@ var arrProduct = [
       {
             img : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16473/goods_img-v1/b27ea3c1a199.jpg',
             name : 'Mobile Phone Nova8 Pro 12GB+512GB 7.1Inch Face ID 6800mAh Dual SIM Android11 Cellphone unlocked 4G 5G 32MP+64MP Smartphones - Black 16GB 512GB',
-            mrp : '113',
-            strikeoff : '283',
+            mrp : '283',
             dis : `60%
             OFF`,
             tp : '1',    
@@ -73,8 +71,7 @@ var arrProduct = [
       {
             img : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16488/goods_img-v1/bbf851606779.jpg',
             name : "2022 New Original 5G Smartphone 7.3 Inch MIX4 16GB+1TB 7300mAh 72MP Camera Unlock Mobile Phones Celular Cellphone Qualcomm 888+ - White 8GB 256GB",
-            mrp : '114',
-            strikeoff : '228',
+            mrp : '228',
             dis : `50%
             OFF`,
             discount : '50',
@@ -94,8 +91,7 @@ var arrProduct = [
       {
             img : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16485/goods_img-v1/b77ce6885375.jpg',
             name : 'New M4PRO 6.7 Inch Global Version 256GB/512GB 6800mAh 16MP+32MP Smartphone Fingerprint Face ID Deca Core Mobile Phones MTK6889 - Yellow 12 512GB',
-            mrp : '130',
-            strikeoff : "290",
+            mrp : "290",
             dis : `55%
             OFF`,
             tp : '1',
@@ -115,8 +111,7 @@ var arrProduct = [
       {
             img : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16504/goods_img-v1/e0a8882343fc.jpg',
             name : 'New S21/S22 Ultra 7.3 HD Full screen android smartphone 16GB+512GB Mobile phone 5G cellphone 24+48MP HD camera Fashion Smart phone - Black 16GB 512GB',
-            mrp : '130',
-            strikeoff : '345',
+            mrp : '345',
             dis : `62%
             OFF`,
             tp : '1',
@@ -183,7 +178,7 @@ arrProduct.forEach(function(el,i){
       
       
       var strikeoff = document.createElement('p');
-      strikeoff.innerText = "$"+el.strikeoff+".00";
+      strikeoff.innerText = "$"+(el.mrp*(100-(+el.discount))/100).toFixed(2);
       strikeoff.style.color = 'gray';
       strikeoff.style.fontSize = "12px";
       strikeoff.style.marginLeft = "10px";
@@ -217,9 +212,6 @@ function des(el){
       window.location.href = 'description.html';
 }
 
-
-
-
 // suggestion products
 
 var arrSuggestion = [
@@ -227,8 +219,7 @@ var arrSuggestion = [
             
             img : 'https://gloimg.gbtcdn.com/soa/gb/item/6883820374342168576/16485/goods_img-v1/b77ce6885375.jpg',
             name : 'New M4PRO 6.7 Inch Global Version 256GB/512GB 6800mAh 16MP+32MP Smartphone Fingerprint Face ID Deca Core Mobile Phones MTK6889 - Yellow 12 512GB',
-            mrp :  '130',
-            strikeoff : "290",
+            mrp : "290",
             dis : `55%
             OFF`,
             discount : '55',
@@ -248,8 +239,7 @@ var arrSuggestion = [
       {
             img : 'https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16455/goods_img_big-v1/43afddbd8ac0.jpg',
             name : 'Blackview BV8800 Global Bands 8GB 128GB Helio G96 IP68 IP69K Waterproof 8380mAh 50MP 20MP Night Vision Camera 6.58 inch 90Hz Rate 4G Smartphone - Orange',
-            mrp : '279',
-            strikeoff : '459',
+            mrp : '459',
             dis : `39%
             OFF`,
             discount : '39',
@@ -269,8 +259,7 @@ var arrSuggestion = [
       {
             img : 'https://gloimg.gbtcdn.com/soa/gb/item/6878024886355423232/16464/goods_img-v1/47a4fb9ff46f.jpg',
             name : 'Global Version W&O S21 Ultra Smartphone 7.3 HD Inch Android 10.0 Mobile Phones 16GB+512GB Cellphones Celular 5G Unlock Smart Phone - green 12GB 256GB China',
-            mrp : '159',
-            strikeoff : '380',
+            mrp : '380',
             dis : `58%
             OFF`,
             discount : '58',
@@ -290,8 +279,7 @@ var arrSuggestion = [
       {
             img : 'https://gloimg.gbtcdn.com/soa/gb/item/6900783172733300736/16474/goods_img-v1/0914f42cf6ba.jpg',
             name : 'Global Version Xiaomi Redmi Note 10 Pro Smartphone 108MP Camera Snapdragon 732G 120Hz AMOLED Display 33W Fast Charging NFC - Bronze 8GB 128GB France',
-            mrp : '270',
-            strikeoff : '389',
+            mrp : '389',
             dis : `31%
             OFF`,
             discount : '31',
@@ -311,8 +299,7 @@ var arrSuggestion = [
       {
             img : 'https://gloimg.gbtcdn.com/soa/gb/store/6615272824267153408/16476/goods_img-v3/262a53fef539.jpg',
             name : 'Global Version Blackview A95 8GB RAM 128GB ROM Octa Core 6.5inch Display Smartphone MTK Helio P70 4380mAh Battery - Add BT EarphoneGlass Blue China',
-            mrp : '229',
-            strikeoff : '258',
+            mrp : '258',
             dis : `11%
             OFF`,
             discount : '11',
@@ -379,7 +366,7 @@ arrSuggestion.forEach(function(el){
       
       
       var strikeoff = document.createElement('p');
-      strikeoff.innerText = "$"+el.strikeoff+".00";
+      strikeoff.innerText = "$"+(el.mrp*(100-(+el.discount))/100).toFixed(2);
       strikeoff.style.color = 'gray';
       strikeoff.style.fontSize = "12px";
       strikeoff.style.marginLeft = "10px";
@@ -448,3 +435,11 @@ function addCart(obj){
       // console.log(acc)
       
 }
+
+
+
+// link to cart 
+
+document.querySelector('#headcartSpan').addEventListener('click',function(){
+      window.location.href = "../cart/cart.html"
+})

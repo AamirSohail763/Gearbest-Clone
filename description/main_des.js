@@ -5,19 +5,8 @@ if(!userdata){
   window.location.href = "../index.html";
 }
 
-var signinStatus = document.getElementById("headsignInSpan");
-if (userdata != null) {
-  username = userdata.email.split("@");
-  signinStatus.innerHTML = username[0];
-  signinStatus.style.overflow = "hidden";
-}
-
 var arr = [];
 arr.push(obj);
-
-if (arr.length>1){
-       arr.shift();
-}
 
 arr.forEach(function(el){
       
@@ -29,13 +18,11 @@ arr.forEach(function(el){
       var nam =  document.querySelector('#col2>h3');
       nam.innerHTML = el.name;
       var mrp = document.querySelector("#acp");
-      mrp.innerHTML = '$'+el.mrp + ".00";
-      
-      var x = +el.mrp/((100-(+el.discount))/100);
+      mrp.innerHTML = '$'+(el.mrp*(100-(+el.discount))/100).toFixed(2);
       // console.log(x);
       
       let strikeoff = document.querySelector('#strike');
-      strikeoff.innerHTML = "$"+Math.ceil(x)+".00";
+      strikeoff.innerHTML = "$"+el.mrp;
       
       let discount = document.querySelector('#dis');
       discount.innerHTML = el.discount+"% OFF"
@@ -73,9 +60,7 @@ var tp = document.querySelector('#QTY :nth-child(3)');
 
 inc.addEventListener('click',function(){
       var x = +tp.innerHTML;
-      if (x<5){
-            x++;
-      }
+      x++;
       tp.innerHTML = x;
       // console.log(tp)
 })
@@ -103,45 +88,37 @@ var count = document.querySelector('#count');
 count.innerHTML = cartinfo.length;
 
 atc.addEventListener('click',function(){
-      flag = false;
-      cartinfo.forEach(function(el){
-            if(el.name == obj.name){
-                  flag = true;
-            }
-      });
 
-      if(!flag){
+      var n = false;
+      for (var i = 0; i<cartinfo.length;i++){
+            if (cartinfo[i].img===arr[0].img && cartinfo[i].mrp==arr[0].mrp){
+                  n = true;
+                  appendTp(i);
+                  alert("Item already add");
+
+      if (n==false){
+            window.location.reload();
+            obj.tp = tp.innerHTML;
             cartinfo.push(obj);
-            count.innerHTML = cartinfo.length;
-            localStorage.setItem("cart",JSON.stringify(cartinfo));
-
-      }else{
-            alert("Product already Exists");
+            localStorage.setItem('cart',JSON.stringify(cartinfo))
       }
-      // ----------------------old code for adding item into cart --------------------
-      // var n = 0;
-      // for (var i = 0; i<cartinfo.length;i++){
-      //       if (cartinfo[i].img===arr[0].img && cartinfo[i].mrp==arr[0].mrp){
-      //             n++;
-      //             alert("Product already Exists");
-      //       }
-      // }
-      // if (n==0){
-      //       window.location.reload();
-      //       arr[0].tp = tp.innerHTML;
-      //       console.log(arr)
-      //       localStorage.setItem('cart',JSON.stringify(arr))
-      // }
-      
 })
 
+function appendTp(i){
+      obj.tp = +tp.innerHTML + (+cartinfo[i].tp)
+      console.log(obj.tp)
+      cartinfo.splice(i,1)
+      cartinfo.push(obj);
+      localStorage.setItem('cart',JSON.stringify(cartinfo))
+      
+}
 // Buy now even Listener 
 
 var buyNow = document.querySelector('#buyNow');
 
 buyNow.addEventListener('click',function(){
       arr[0].tp = tp.innerHTML;
-      localStorage.setItem('AddToCart',JSON.stringify(arr))
+      localStorage.setItem('Cart',JSON.stringify(arr))
       window.location.href = "../cart/confirm.html" // cart page link;
 })
 
@@ -158,4 +135,15 @@ headcartSpan.addEventListener('click',function(){
 // localStorage.removeItem("cart")
 
 
+let userdata = JSON.parse(localStorage.getItem("account"));
+
+var signinStatus = document.getElementById("headsignInSpan");
+if (userdata != null) {
+  signinStatus.innerHTML = userdata[0].email[0].toUpperCase();
+  signinStatus.style.background = "teal";
+  signinStatus.style.color = 'white';
+  signinStatus.style.fontWeight = '700';
+  signinStatus.style.borderRadius = "50%";
+  signinStatus.style.padding = '0 10px';
+}
 
