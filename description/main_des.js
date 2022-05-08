@@ -32,13 +32,11 @@ arr.forEach(function(el){
       var nam =  document.querySelector('#col2>h3');
       nam.innerHTML = el.name;
       var mrp = document.querySelector("#acp");
-      mrp.innerHTML = '$'+el.mrp + ".00";
-      
-      var x = +el.mrp/((100-(+el.discount))/100);
+      mrp.innerHTML = '$'+(el.mrp*(100-(+el.discount))/100).toFixed(2);
       // console.log(x);
       
       let strikeoff = document.querySelector('#strike');
-      strikeoff.innerHTML = "$"+Math.ceil(x)+".00";
+      strikeoff.innerHTML = "$"+el.mrp;
       
       let discount = document.querySelector('#dis');
       discount.innerHTML = el.discount+"% OFF"
@@ -106,22 +104,31 @@ var count = document.querySelector('#count');
 count.innerHTML = cartinfo.length;
 
 atc.addEventListener('click',function(){
-      var n = 0;
+      var n = false;
       for (var i = 0; i<cartinfo.length;i++){
             if (cartinfo[i].img===arr[0].img && cartinfo[i].mrp==arr[0].mrp){
-                  n++;
+                  n = true;
+                  appendTp(i);
                   alert("Product already Exists");
             }
       }
-      if (n==0){
+      if (n==false){
             window.location.reload();
-            arr[0].tp = tp.innerHTML;
-            console.log(arr)
-            localStorage.setItem('cart',JSON.stringify(arr))
+            obj.tp = tp.innerHTML;
+            cartinfo.push(obj);
+            localStorage.setItem('cart',JSON.stringify(cartinfo))
       }
-      
+      // console.log(obj)
 })
 
+function appendTp(i){
+      cartinfo.splice(i,1)
+      console.log(cartinfo)
+      obj.tp = tp.innerHTML;
+      cartinfo.push(obj);
+      localStorage.setItem('cart',JSON.stringify(cartinfo))
+      
+}
 // Buy now even Listener 
 
 var buyNow = document.querySelector('#buyNow');
@@ -129,11 +136,22 @@ var buyNow = document.querySelector('#buyNow');
 buyNow.addEventListener('click',function(){
       arr[0].tp = tp.innerHTML;
       localStorage.setItem('AddToCart',JSON.stringify(arr))
-      window.location.href = "" // cart page link;
+      window.location.href = "../cart/cart.html" // cart page link;
 })
 
 
 // localStorage.removeItem("cart")
 
 
+let userdata = JSON.parse(localStorage.getItem("account"));
+
+var signinStatus = document.getElementById("headsignInSpan");
+if (userdata != null) {
+  signinStatus.innerHTML = userdata[0].email[0].toUpperCase();
+  signinStatus.style.background = "teal";
+  signinStatus.style.color = 'white';
+  signinStatus.style.fontWeight = '700';
+  signinStatus.style.borderRadius = "50%";
+  signinStatus.style.padding = '0 10px';
+}
 

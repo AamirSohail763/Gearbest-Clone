@@ -73,7 +73,7 @@
 
     height: 26px;
     width: 355px;
-    padding: 3px 0 3px 0;
+    padding: 3px 0 0 0;
     border: none;
     resize: none;
     outline: none;
@@ -82,7 +82,7 @@
 #searchBtn{
     background-color: rgb(255,218,0);
     border: 0px;
-    padding: 12px 14px 7px 14px;
+    padding: 12px 14px 5px 14px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     margin-left: -4px;
@@ -117,11 +117,7 @@
     color: #666666;
     /* border: 1px solid slateblue; */
     margin: 0;
-
     height: 25px;
-    width: 70px;
-    min-width: 70px;
-
     display: inline-block;
     position: relative;
     cursor: pointer;
