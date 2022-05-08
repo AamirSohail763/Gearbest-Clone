@@ -74,9 +74,7 @@ var tp = document.querySelector('#QTY :nth-child(3)');
 
 inc.addEventListener('click',function(){
       var x = +tp.innerHTML;
-      if (x<5){
-            x++;
-      }
+      x++;
       tp.innerHTML = x;
       // console.log(tp)
 })
@@ -109,7 +107,7 @@ atc.addEventListener('click',function(){
             if (cartinfo[i].img===arr[0].img && cartinfo[i].mrp==arr[0].mrp){
                   n = true;
                   appendTp(i);
-                  alert("Product already Exists");
+                  alert("Item already add");
             }
       }
       if (n==false){
@@ -122,9 +120,9 @@ atc.addEventListener('click',function(){
 })
 
 function appendTp(i){
+      obj.tp = +tp.innerHTML + (+cartinfo[i].tp)
+      console.log(obj.tp)
       cartinfo.splice(i,1)
-      console.log(cartinfo)
-      obj.tp = tp.innerHTML;
       cartinfo.push(obj);
       localStorage.setItem('cart',JSON.stringify(cartinfo))
       
