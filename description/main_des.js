@@ -31,7 +31,7 @@ arr.forEach(function(el){
       var mrp = document.querySelector("#acp");
       mrp.innerHTML = '$'+el.mrp + ".00";
       
-      var x = +el.mrp/((100-(+el.discount))/100);
+      var x = +el.mrp * ((100-(+el.discount))/100);
       // console.log(x);
       
       let strikeoff = document.querySelector('#strike');

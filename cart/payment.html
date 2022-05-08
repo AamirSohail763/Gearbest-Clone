@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="https://www.gearbest.com/favicon.ico">
     <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnOeIkuWvWgXs2NZrkKWq19H9_G9dWdN-Xmg&usqp=CAU">
      <style>
          body{
@@ -13,7 +14,9 @@
          #container{
              width: 75%;
              height: 925px;
-             margin: auto;
+             /* margin: auto; */
+             margin-top: 50px;
+             margin-left: 11%;
              /* border: 1px solid; */
             
              display: flex;
@@ -225,12 +228,21 @@
              /* margin-top: 100px; */
 
          }
+         #cont3{
+            width: 100%;
+            height: 100px;
+            /* border: 1px solid; */
+            background-color: white;
+            margin: auto;
+        }
 
      </style>
      
 
 </head>
 <body style="font-family: OpenSans, Arial, Helvetica, sans-serif;">
+    <div id="cont3">
+        <img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=truehttps://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true" alt="" style="height: 60px; margin-left: 75px;margin-top: 15px;">
     <div id="container">
         <!-- left side -->
          <div id="containerl">
@@ -254,22 +266,22 @@
                  </label>
                  </div>
                  <div id="fcont">
-                     <input type="text" placeholder="card number" >
+                     <input type="number" placeholder="card number                                                     12 digit number" id="inp1">
                      <div style="display: flex;">
-                      <select name="" id="" style="margin-left: 25px;">
-                          <option value="">Expiration Month</option>
-                          <option value="">01</option>
-                          <option value="">02</option>
-                          <option value="">03</option>
-                          <option value="">04</option>
-                          <option value="">05</option>
-                          <option value="">06</option>
-                          <option value="">07</option>
-                          <option value="">08</option>
-                          <option value="">09</option>
-                          <option value="">10</option>
-                          <option value="">11</option>
-                          <option value="">12</option>
+                      <select name="" id="sele" style="margin-left: 25px;">
+                          <option value="exp">Expiration Month</option>
+                          <option value="a">01</option>
+                          <option value="b">02</option>
+                          <option value="c">03</option>
+                          <option value="d">04</option>
+                          <option value="e">05</option>
+                          <option value="f">06</option>
+                          <option value="G">07</option>
+                          <option value="h">08</option>
+                          <option value="i">09</option>
+                          <option value="j">10</option>
+                          <option value="k">11</option>
+                          <option value="l">12</option>
                       </select>
                       <select name="" id="" style="margin-left: 8px;">
                           <option value="">2022</option>
@@ -294,8 +306,8 @@
                           <option value="">2041</option>
                       </select>
                     </div>
-                    <input type="text" placeholder="Security Code" >
-                    <input type="text" placeholder="Card Holder" >
+                    <input type="number" placeholder="Security Code                                                    3 digit number" id="inp2" >
+                    <input type="text" placeholder="Card Holder" id="inp3" >
                     <p style="margin-top: 25px;margin-left: 25px; font-weight: 700;" >Billing Address</p>
                     <div class="dis"> 
                         <p class="name"> name</p>
@@ -362,15 +374,15 @@
                 font-weight: 700;">22050500992813504028 </p>
                 <p>Shipping Address</p>
                 <div class="d1">
-                    <p class="name">name</p>
+                    <p class="name nameR">name</p>
                     <p class="coma">,</p>
-                    <p class="add">address</p>
+                    <p class="add addR">address</p>
                     <p class="coma">,</p>
-                    <p class="town">ttown</p>
+                    <p class="town townR">ttown</p>
                     <p class="coma">,</p>
-                    <p class="state">state</p>
+                    <p class="state stateR">state</p>
                     <p class="coma">,</p>
-                    <p class="country">country</p>
+                    <p class="country countryR">country</p>
                 </div>
             </div>
         </div>
@@ -416,3 +428,51 @@
     
 </body>
 </html>
+<script src="payment.js">
+    
+    // var addressArr=JSON.parse(localStorage.getItem("addressLS")) || [];
+
+    // var fullname=document.querySelector(".name")
+    // //var lname=document.querySelector("#p2")
+    // //var phone=document.querySelector("#pn");
+    // //var email=document.querySelector("#em")
+    // var city=document.querySelector(".town")
+    // var state=document.querySelector(".state");
+    // //var pin=document.querySelector("#pin");
+    // var country=document.querySelector(".country");
+    // var address=document.querySelector(".add");
+
+    // var fullR=document.querySelector(".nameR")
+    // var cityR=document.querySelector(".townR")
+    // var stateR=document.querySelector(".stateR");
+    // var countryR=document.querySelector(".countryR");
+    // var addressR=document.querySelector(".addR");
+
+
+
+    // displayUser();
+
+    // function displayUser(){
+
+    //     addressArr.forEach(function(elem){
+
+    //     var fullN = elem.fname+" "+elem.lname;
+
+    //     fullname.innerHTML=fullN
+    //     city.innerHTML=elem.city
+    //     state.innerHTML=elem.country
+    //     country.innerHTML=elem.province
+    //     address.innerHTML=elem.add1
+
+    //     fullR.innerHTML=elem.fname;
+    //     cityR.innerHTML= elem.city
+    //     stateR.innerHTML= elem.country
+    //     countryR.innerHTML= elem.province
+    //     addressR.innerHTML= elem.add1
+
+
+
+    //     })
+    // }
+
+</script>
