@@ -22,7 +22,7 @@ var regi=document.querySelector(".register");
 var form=document.querySelector("#form");
 form.addEventListener("submit",register);
 
-var accounts = JSON.parse(localStorage.getItem("account")) || [];
+var accounts = JSON.parse(localStorage.getItem("accounts")) || [];
 
 function register(){
 
@@ -76,7 +76,7 @@ function register(){
     
 
     accounts.push(obj);
-    localStorage.setItem("account",JSON.stringify(accounts));
+    localStorage.setItem("accounts",JSON.stringify(accounts));
     alert("Registration Successful");
 
     empty();

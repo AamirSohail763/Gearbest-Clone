@@ -1,4 +1,4 @@
-var grid= document.querySelector("#oyaji");
+// var grid= document.querySelector("#oyaji");
 
 var allarray=[
     {
@@ -191,9 +191,10 @@ var allarray=[
 let curruser = JSON.parse(localStorage.getItem("currAccount"));
 if(!curruser){
     window.location.href = "../index.html";
+    alert("Please login to get access to the coupons");
 }
 let headsignInSpan = document.querySelector("#headsignInSpan");
-userName = curruser.email.split("@")[0]
+userName = curruser.email.split("@")[0];
 headsignInSpan.innerHTML = "<p>"+userName+"</p>";
 
 

@@ -1,3 +1,5 @@
+let currAccount = JSON.parse(localStorage.getItem("currAccount"));
+
 var addressArr=JSON.parse(localStorage.getItem("addressLS")) || [];
 
 var fullname=document.querySelector(".name")
@@ -61,9 +63,11 @@ function finalsub(){
     console.log(input1)
 
     if(input1.length ==12 && input2.length==3  && input3.length>1 && sel!="exp"  ){
-        alert("done")
+        localStorage.removeItem("cart");
+        alert("Payment successfull");
         console.log(input1)
-        location.href="cart.html"
+        location.href="../index.html";
+
     }
 
     else{
@@ -73,3 +77,18 @@ function finalsub(){
     }
     // location.reload()
 }
+
+
+let subTot = document.querySelector(".totAmt");
+let payAmt = document.querySelector(".payAmt");
+let subTotal = 0;
+products = currAccount.orders;
+
+products.forEach(function(product){
+    afterDis = Number(product.mrp) * (100 - Number(product.discount)) /100;
+    total = afterDis * product.tp;
+    subTotal += total;
+})
+
+subTot.innerText = Number(subTotal.toFixed(2)) +3;
+payAmt.innerText = Number(subTotal.toFixed(2)) + 3;

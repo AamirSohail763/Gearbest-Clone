@@ -71,7 +71,7 @@
 
     height: 26px;
     width: 355px;
-    padding: 3px 0 3px 0;
+    /* padding: 3px 0 3px 0; */
     border: none;
     resize: none;
     outline: none;

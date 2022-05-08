@@ -369,7 +369,8 @@ function Displayproduct(prodS) {
       // })
 
       price.classList.add("innerPrice");
-      price.innerText = "$" + prod.mrp;
+      prPrice= (+prod.mrp * (100 - Number(prod.discount)) /100).toFixed(2)
+      price.innerText = "$" + prPrice ;
       div.append(divOverlay, price);
       div.style.width = "100%";
       bannerDiv.append(div);
@@ -410,7 +411,8 @@ function display(data) {
 
     var price = document.createElement("p");
     price.setAttribute("class", "price");
-    price.innerText = "$" + ele.mrp;
+    var prPrice = (+ele.mrp * (100- Number(ele.discount)) /100).toFixed(2);
+    price.innerText = "$" + prPrice;
 
     var discount = document.createElement("div");
     discount.setAttribute("class", "dTag");
@@ -429,7 +431,7 @@ function display(data) {
   });
 }
 
-let cart = JSON.parse(localStorage.getItem("cart"));
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 document.querySelector("#cartCount").innerText = cart.length;
 

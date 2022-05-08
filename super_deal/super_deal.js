@@ -322,9 +322,7 @@ let products = [
 ];
 
 userdata = JSON.parse(localStorage.getItem("currAccount"));
-if(!userdata){
-  window.location.href = "../index.html";
-}
+
 
 var signinStatus = document.getElementById("headsignInSpan");
 if (userdata != null) {

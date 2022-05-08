@@ -1,4 +1,4 @@
-var addressArr=JSON.parse(localStorage.getItem("addressLS")) || [];
+var currAccount=JSON.parse(localStorage.getItem("currAccount")) || [];
 
 var fname=document.querySelector("#p1")
 var lname=document.querySelector("#p2")
@@ -13,7 +13,7 @@ displayData();
 
 function displayData(){
 
-    addressArr.forEach(function(elem){
+    let elem = currAccount.address;
 
         fname.innerHTML=elem.fname
         lname.innerHTML=elem.lname
@@ -24,9 +24,6 @@ function displayData(){
         state.innerHTML=elem.country
         country.innerHTML=elem.province
         address.innerHTML=elem.add1
-
-
-    })
 
 }
 
@@ -42,3 +39,21 @@ var btn2=document.querySelector(".bt2").addEventListener("click",toaddform2)
 function toaddform2(){
      location.href="payment.html"
 }
+let subTot = document.querySelector(".subtotal");
+let shipCharge = document.querySelector(".shippingCharge");
+let subTotal = 0;
+let finalAmt = document.querySelector(".finalAmt");
+
+products = currAccount.orders;
+
+products.forEach(function(product){
+    afterDis = Number(product.mrp) * (100 - Number(product.discount)) /100;
+    total = afterDis * product.tp;
+    subTotal += total;
+})
+
+subTot.innerText = subTotal.toFixed(2);
+
+finalAmt.innerText = Number(subTotal.toFixed(2)) + 3;
+
+

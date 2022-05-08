@@ -24,7 +24,7 @@ var regi=document.querySelector(".register");
 var form=document.querySelector("#form");
 form.addEventListener("submit",signin);
 
-var accounts=JSON.parse(localStorage.getItem("account")) || [];
+var accounts=JSON.parse(localStorage.getItem("accounts")) || [];
 
 function signin(){
     event.preventDefault();

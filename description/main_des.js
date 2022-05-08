@@ -1,12 +1,11 @@
 var obj = JSON.parse(localStorage.getItem('CurrProdDesc')) ;
 
     let userdata = JSON.parse(localStorage.getItem("currAccount"));
-    console.log(userdata);
-
-      if(!userdata){
-      window.location.href = "../index.html";
-      }
-
+    if(userdata){
+      var signinStatus = document.getElementById("headsignInSpan");
+      username = userdata.email.split("@");
+      signinStatus.innerHTML = username[0];
+    } 
 var arr = [];
 arr.push(obj);
 
@@ -121,9 +120,21 @@ function appendTp(i){
 var buyNow = document.querySelector('#buyNow');
 
 buyNow.addEventListener('click',function(){
-      arr[0].tp = tp.innerHTML;
-      localStorage.setItem('Cart',JSON.stringify(arr))
-      window.location.href = "../cart/confirm.html" // cart page link;
+      let flag = false;
+      cartinfo.forEach(function(prod,i){
+            if(prod.name == obj.name &&prod.img ==obj.img){
+                  flag = true;
+            }
+      })
+      if(flag ==false){
+
+            obj.tp = tp.innerHTML
+            cartinfo.unshift(obj)
+            localStorage.setItem('cart',JSON.stringify(cartinfo))
+            window.location.href = "../cart/cart.html"
+      }else{
+            window.location.href = "../cart/cart.html" // cart page link;
+      }
 })
 
 
@@ -141,13 +152,13 @@ headcartSpan.addEventListener('click',function(){
 
 // let userdata = JSON.parse(localStorage.getItem("account"));
 
-var signinStatus = document.getElementById("headsignInSpan");
-if (userdata != null) {
-  signinStatus.innerHTML = userdata.email[0].toUpperCase();
-  signinStatus.style.background = "teal";
-  signinStatus.style.color = 'white';
-  signinStatus.style.fontWeight = '700';
-  signinStatus.style.borderRadius = "50%";
-  signinStatus.style.padding = '0 10px';
-}
+// var signinStatus = document.getElementById("headsignInSpan");
+// if (userdata != null) {
+//   signinStatus.innerHTML = userdata.email[0].toUpperCase();
+//   signinStatus.style.background = "teal";
+//   signinStatus.style.color = 'white';
+//   signinStatus.style.fontWeight = '700';
+//   signinStatus.style.borderRadius = "50%";
+//   signinStatus.style.padding = '0 10px';
+// }
 

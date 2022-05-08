@@ -5,7 +5,8 @@
 
 document.querySelector("#form").addEventListener("submit",createAddress);
 
-
+let accounts = JSON.parse(localStorage.getItem("accounts"));
+let currAccount = JSON.parse(localStorage.getItem("currAccount"));
 
 var addressArr=JSON.parse(localStorage.getItem("addressLS")) || [];
 
@@ -50,8 +51,28 @@ function createAddress(){
         code : code,
         phoneNo : phone,
         email : email
-
     }
+
+    let userIndex ;
+    accounts.forEach(function (ele,i,arr){
+        if(ele.email == currAccount.email){
+            currAccount["address"] = obj;
+            userIndex = i;
+            localStorage.setItem("currAccount",JSON.stringify(currAccount));
+        }
+        
+
+    });
+    if(userIndex != null){
+        accounts[userIndex] = currAccount;
+        localStorage.setItem("accounts",JSON.stringify(accounts));
+    }
+
+    
+
+
+
+
 
 
 

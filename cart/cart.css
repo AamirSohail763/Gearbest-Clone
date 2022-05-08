@@ -216,6 +216,10 @@ color: black;
 }
 #p2>a{
    margin-right: 310px;
+   text-decoration: none;
+   font-size: 18px;
+   color: #333;
+   padding-left: 30px;
 }
 #p2 >img{
     height: 50px;
@@ -294,9 +298,15 @@ background-color: #f2f2f2;
     border: 1px solid  #f2f2f2;
 }
 .edit{
-    font-size: 22px;
-    font-weight: 400;
-    color: grey;
+    font-size: 18px;
+    color: white;
+    padding: 5px 10px;
+    background-color: #dc3545;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+
 }
 
 .propin{
