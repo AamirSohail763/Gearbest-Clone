@@ -82,7 +82,7 @@ cartProd.forEach(function (item,i,arr) {
     decspan.innerText = "-";
     var displayCount = document.createElement("span");
     displayCount.setAttribute("class", "displayCount");
-    displayCount.innerText = item.productCount || 1; /////////
+    displayCount.innerText = item.tp || 1; /////////
     var incSpan = document.createElement("span");
     incSpan.setAttribute("class", "incBtn");
     incSpan.innerText = "+";
@@ -96,7 +96,7 @@ cartProd.forEach(function (item,i,arr) {
       let total = Number((+count * Number(proprice.innerText)).toFixed(2));
       console.log(typeof total);
       pronprice.innerText = total;
-      item.productCount = count;
+      item.tp = count;
       let index;
       cartProd.forEach(function(pro,i){
           if(pro.name == item.name){
@@ -125,7 +125,7 @@ cartProd.forEach(function (item,i,arr) {
             
             console.log(total);
             pronprice.innerText = total;
-            item.productCount = count;
+            item.tp = count;
             let index;
             cartProd.forEach(function(pro,i){
                 if(pro.name == item.name){
