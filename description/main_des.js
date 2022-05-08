@@ -1,20 +1,4 @@
-var obj = JSON.parse(localStorage.getItem('CurrProdDesc')) || {
-      img: "https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16455/goods_img_big-v1/d30e89bfb043.jpg",
-      name: "Pro Global Bands IP68&IPIP69K 8GB 128GB Helio G95 NFC Android 11 8500mAh 6.39 inch 48MP Round Quad Camera Octa Core 4G Smartphone",
-      mrp: "279",
-      discount: "30",
-      store: "Nimble Tech Store",
-      smallImg : [
-        {
-              img1 : 'https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16455/goods_img_big-v1/d30e89bfb043.jpg',
-              img2 : 'https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16455/goods_img_big-v1/d429b1e24825.jpg',
-              img3 : 'https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16455/goods_img_big-v1/ba5461996f94.jpg',
-              img4 : 'https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16455/goods_img_big-v1/fd0d575f9ccc.jpg',
-              img5 : 'https://gloimg.gbtcdn.com/soa/gb/item/6870745450383863808/16455/goods_img_big-v1/e196c195c7a2.jpg'
-        }
-      ]
-    }
-
+var obj = JSON.parse(localStorage.getItem('CurrProdDesc'))
 var arr = [];
 arr.push(obj);
 
@@ -133,7 +117,7 @@ var buyNow = document.querySelector('#buyNow');
 
 buyNow.addEventListener('click',function(){
       arr[0].tp = tp.innerHTML;
-      localStorage.setItem('AddToCart',JSON.stringify(arr))
+      localStorage.setItem('Cart',JSON.stringify(arr))
       window.location.href = "../cart/cart.html" // cart page link;
 })
 
