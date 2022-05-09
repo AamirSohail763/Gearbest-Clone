@@ -1,10 +1,13 @@
-var obj = JSON.parse(localStorage.getItem('CurrProdDesc'))
+var obj = JSON.parse(localStorage.getItem('CurrProdDesc')) ;
+
+    let userdata = JSON.parse(localStorage.getItem("currAccount"));
+    if(userdata){
+      var signinStatus = document.getElementById("headsignInSpan");
+      username = userdata.email.split("@");
+      signinStatus.innerHTML = username[0];
+    } 
 var arr = [];
 arr.push(obj);
-
-if (arr.length>1){
-       arr.shift();
-}
 
 arr.forEach(function(el){
       
@@ -86,6 +89,7 @@ var count = document.querySelector('#count');
 count.innerHTML = cartinfo.length;
 
 atc.addEventListener('click',function(){
+
       var n = false;
       for (var i = 0; i<cartinfo.length;i++){
             if (cartinfo[i].img===arr[0].img && cartinfo[i].mrp==arr[0].mrp){
@@ -100,7 +104,7 @@ atc.addEventListener('click',function(){
             cartinfo.push(obj);
             localStorage.setItem('cart',JSON.stringify(cartinfo))
       }
-      // console.log(obj)
+
 })
 
 function appendTp(i){
@@ -116,24 +120,45 @@ function appendTp(i){
 var buyNow = document.querySelector('#buyNow');
 
 buyNow.addEventListener('click',function(){
-      arr[0].tp = tp.innerHTML;
-      localStorage.setItem('Cart',JSON.stringify(arr))
-      window.location.href = "../cart/cart.html" // cart page link;
+      let flag = false;
+      cartinfo.forEach(function(prod,i){
+            if(prod.name == obj.name &&prod.img ==obj.img){
+                  flag = true;
+            }
+      })
+      if(flag ==false){
+
+            obj.tp = tp.innerHTML
+            cartinfo.unshift(obj)
+            localStorage.setItem('cart',JSON.stringify(cartinfo))
+            window.location.href = "../cart/cart.html"
+      }else{
+            window.location.href = "../cart/cart.html" // cart page link;
+      }
 })
+
+
+// linking pages in nav bar
+
+headcartSpan = document.querySelector("#headcartSpan");
+
+headcartSpan.addEventListener('click',function(){
+      window.location.href = "../cart/cart.html";
+});
 
 
 // localStorage.removeItem("cart")
 
 
-let userdata = JSON.parse(localStorage.getItem("account"));
+// let userdata = JSON.parse(localStorage.getItem("account"));
 
-var signinStatus = document.getElementById("headsignInSpan");
-if (userdata != null) {
-  signinStatus.innerHTML = userdata[0].email[0].toUpperCase();
-  signinStatus.style.background = "teal";
-  signinStatus.style.color = 'white';
-  signinStatus.style.fontWeight = '700';
-  signinStatus.style.borderRadius = "50%";
-  signinStatus.style.padding = '0 10px';
-}
+// var signinStatus = document.getElementById("headsignInSpan");
+// if (userdata != null) {
+//   signinStatus.innerHTML = userdata.email[0].toUpperCase();
+//   signinStatus.style.background = "teal";
+//   signinStatus.style.color = 'white';
+//   signinStatus.style.fontWeight = '700';
+//   signinStatus.style.borderRadius = "50%";
+//   signinStatus.style.padding = '0 10px';
+// }
 

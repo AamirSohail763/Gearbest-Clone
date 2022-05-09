@@ -70,7 +70,6 @@
     line-height: 26px;
     text-decoration: none;
     word-spacing: 0px;
-
     height: 26px;
     width: 355px;
     padding: 3px 0 0 0;
@@ -218,10 +217,11 @@
     display: inline-block;
     cursor: pointer;
 }
-.headNav_itemLink:hover{
+.headNav_itemLink:hover,.active{
     text-decoration: underline 4px solid  #F2CE00;
     /* text-underline-offset: 4px; */
 }
+
 #invisible{
     font-size: 14px;
     line-height: 25px;
