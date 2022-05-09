@@ -1,6 +1,7 @@
 // console.log(100)
 // for supplier name
 
+
 let cartProd = JSON.parse(localStorage.getItem("cart")) || [];
 
 console.log(cartProd);
@@ -333,31 +334,37 @@ let currUser = JSON.parse(localStorage.getItem("currAccount"));
 
 
 function movetopay() {
-currUser.orders = cartProd;
-localStorage.setItem("currAccount",JSON.stringify(currUser));
-let accounts = JSON.parse(localStorage.getItem("accounts"));
+  if(currUser){
 
-console.log(accounts);
-
-let userIndex;
-
-    accounts.forEach(function (ele,i){
-        if(ele.email == currUser.email){
-            currUser["orders"] = cartProd;
-            userIndex = i;
-            localStorage.setItem("currAccount",JSON.stringify(currUser));
+    currUser.orders = cartProd;
+    localStorage.setItem("currAccount",JSON.stringify(currUser));
+    let accounts = JSON.parse(localStorage.getItem("accounts"));
+    
+    console.log(accounts);
+    
+    let userIndex;
+    
+        accounts.forEach(function (ele,i){
+            if(ele.email == currUser.email){
+                currUser["orders"] = cartProd;
+                userIndex = i;
+                localStorage.setItem("currAccount",JSON.stringify(currUser));
+            }
+        });
+     
+        if(userIndex != undefined){
+            accounts[userIndex] = currUser;
+            localStorage.setItem("accounts",JSON.stringify(accounts));
         }
-    });
- 
-    if(userIndex != undefined){
-        accounts[userIndex] = currUser;
-        localStorage.setItem("accounts",JSON.stringify(accounts));
-    }
-    if(currUser.address == undefined){
-      window.location.href = "address.html";
-    }else{
-      window.location.href = "confirm.html";
-    }
+        if(currUser.address == undefined){
+          window.location.href = "address.html";
+        }else{
+          window.location.href = "confirm.html";
+        }
+  }else{
+    alert("Please login to proceed");
+    window.location.href = "../../signup/signup.html";
+  }
   }
     
 

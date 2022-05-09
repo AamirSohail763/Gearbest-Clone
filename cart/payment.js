@@ -1,5 +1,9 @@
 let currAccount = JSON.parse(localStorage.getItem("currAccount"));
 
+if(!currAccount){
+    window.location.href = "../../signup/signup.html";
+}
+
 var addressArr=JSON.parse(localStorage.getItem("addressLS")) || [];
 
 var fullname=document.querySelector(".name")
@@ -85,8 +89,12 @@ let subTotal = 0;
 products = currAccount.orders;
 
 products.forEach(function(product){
+    let tp = 1
+    if(product.tp){
+         tp = product.tp;
+    }
     afterDis = Number(product.mrp) * (100 - Number(product.discount)) /100;
-    total = afterDis * product.tp;
+    total = afterDis * tp;
     subTotal += total;
 })
 

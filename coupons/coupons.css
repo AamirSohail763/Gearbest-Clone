@@ -141,6 +141,7 @@
     display: flex;
     cursor: pointer;
 }
+
 #headcartSpan{
     font-size: 14px;
     line-height: 25px;
@@ -149,7 +150,6 @@
     vertical-align: middle;
     word-spacing: 0px;
     color: #666666;
-    /* border: 1px solid slateblue; */
     margin: 0;
 
     height: 25px;
@@ -157,7 +157,7 @@
 
     display: inline-block;
     cursor: pointer;
-}
+} 
 #headEntries_user i{
     margin-top: 5px;
 }
@@ -1202,7 +1202,31 @@ form span{
     text-decoration: line-through;
     color: rgb(209,192,186);
     /* margin-bottom: 10px; */
+}
 
+
+/* nav cart counter */
+.headcart_icon{
+    position: relative;
+    /* display: block; */
+}
+
+#cartCount{  
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    background-color: #f40b4e;
+    padding: 3px;
+    color: white;
+    border-radius: 50%;
+    margin: 0;
+    font-weight: bold; 
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    text-align: center;
+    font-size: 10px;
+    align-self: center;
 }
 
 

@@ -188,6 +188,23 @@ var allarray=[
 
 ]
 
+ // cart count
+ let cart = JSON.parse(localStorage.getItem("cart")) || [];
+ console.log(cart);
+ let cartCount = document.querySelector("#cartCount");
+ if (cart.length > 99) {
+   cartCount.innerText = "99+";
+ } else {
+   cartCount.innerText = cart.length;
+ }
+//  page linking for cart btn 
+ headcartSpan = document.querySelector("#headcartSpan");
+
+headcartSpan.addEventListener("click", function () {
+  window.location.href = "../cart/cart.html";
+});
+// -------------------------------
+
 let curruser = JSON.parse(localStorage.getItem("currAccount"));
 if(!curruser){
     window.location.href = "../index.html";

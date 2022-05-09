@@ -24,6 +24,7 @@
             /* line-height: 18px; */
             border: 1px solid rgba(201, 201, 204, 0.438);
             width: 550px;
+            outline: none;
         }
         p+p{
             margin-right: 30px;
@@ -36,8 +37,10 @@
         }
         #code{
             width: 70px;
-            background-color: gray;
-            color: black;
+            background-color: rgba(199, 199, 199, 0.661);
+            color: #333;
+            padding-left: 5px;
+            font-weight: 600;
         }
 
         #ph{
@@ -67,7 +70,7 @@
 <body style="font-family: OpenSans, Arial, Helvetica, sans-serif;">
 
 <div id="cont3">
-     <img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=truehttps://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true" alt="" style="height: 55px; margin-left: 30px;margin-top: 15px;">
+     <a href="../../index.html"><img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=truehttps://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true" alt="" style="height: 55px; margin-left: 30px;margin-top: 15px;"></a>
 </div>
 
    
@@ -152,8 +155,16 @@
     <div style="display: flex;">
         <p class="star" style="margin-left: 17px;">*</p>
         <p>Phone Number:</p>
-        <input type="number" id="code" placeholder="IDD"   >
-        <input type="number" size="77"  id="ph" >
+        <select name="" id="code">
+            <option value=""></option>
+
+            <option value="+90">+90</option>
+            <option value="+91" selected>+91</option>
+            <option value="+92">+92</option>
+            <option value="+93">+93</option>
+            <option value="+94">+94</option>
+        </select>
+        <input type="number" size="77"  id="ph"placeholder="Enter 10 digit phone number">
     </div>
     <br>
     <div style="display: flex;">

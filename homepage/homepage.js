@@ -332,7 +332,7 @@ let products = [
 ];
 // var currDescProd
 currDescProd = JSON.parse(localStorage.getItem("CurrProdDesc")) || [];
- 
+
 // function (){
 
 //   let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -369,15 +369,15 @@ function Displayproduct(prodS) {
       // })
 
       price.classList.add("innerPrice");
-      prPrice= (+prod.mrp * (100 - Number(prod.discount)) /100).toFixed(2)
-      price.innerText = "$" + prPrice ;
+      prPrice = ((+prod.mrp * (100 - Number(prod.discount))) / 100).toFixed(2);
+      price.innerText = "$" + prPrice;
       div.append(divOverlay, price);
       div.style.width = "100%";
       bannerDiv.append(div);
       div.addEventListener("click", function () {
         AddCurrProd(prod);
         localStorage.setItem("CurrProdDesc", JSON.stringify(prod));
-        window.location.href="../description/description.html"
+        window.location.href = "../../description/description.html"; // made changes for git repo linking issue
       });
     }
   });
@@ -411,7 +411,7 @@ function display(data) {
 
     var price = document.createElement("p");
     price.setAttribute("class", "price");
-    var prPrice = (+ele.mrp * (100- Number(ele.discount)) /100).toFixed(2);
+    var prPrice = ((+ele.mrp * (100 - Number(ele.discount))) / 100).toFixed(2);
     price.innerText = "$" + prPrice;
 
     var discount = document.createElement("div");
@@ -426,7 +426,7 @@ function display(data) {
     card.addEventListener("click", function () {
       AddCurrProd(ele);
       localStorage.setItem("CurrProdDesc", JSON.stringify(ele));
-      window.location.href = "../description/description.html";
+      window.location.href = "../../description/description.html"; // made changes for git repo linking issue
     });
   });
 }
@@ -458,5 +458,5 @@ function addToCart(product) {
 }
 
 document.querySelector("#headcartSpan").addEventListener("click", function () {
-  window.location.href = "../cart/cart.html";
+  window.location.href = "../../cart/cart.html"; // made changes for git repo linking issue
 });

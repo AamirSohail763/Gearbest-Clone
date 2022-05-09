@@ -323,7 +323,6 @@ let products = [
 
 userdata = JSON.parse(localStorage.getItem("currAccount"));
 
-
 var signinStatus = document.getElementById("headsignInSpan");
 if (userdata != null) {
   username = userdata.email.split("@");
@@ -383,7 +382,7 @@ function displayCard(arr) {
     let pname = document.createElement("p");
     let plink = document.createElement("a");
     plink.setAttribute("class", "prod_link");
-    
+
     plink.addEventListener("click", function () {
       localStorage.setItem("CurrProdDesc", JSON.stringify(product));
     });
@@ -566,16 +565,18 @@ function sort_discount(products, sort_type) {
   displayCard(products);
 }
 
-// linking pages in nav part 
+// linking pages in nav part
 
+signInLink = document.querySelector("#signInLink");
+signUpBtn = document.querySelector("#signUpBtn");
 
-// signInLink= document.querySelector("#signInLink");
-// signUpBtn = document.querySelector("#signUpBtn");
-
-// signInLink.href;
+signInLink.href = "../../signup/signup.html";
+signUpBtn.addEventListener("click", function () {
+  window.location.href = "../../signup/register.html";
+});
 
 headcartSpan = document.querySelector("#headcartSpan");
 
-headcartSpan.addEventListener("click",function(){
+headcartSpan.addEventListener("click", function () {
   window.location.href = "../cart/cart.html";
-})
+});
