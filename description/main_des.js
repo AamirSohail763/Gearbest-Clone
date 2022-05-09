@@ -1,4 +1,12 @@
 var obj = JSON.parse(localStorage.getItem('CurrProdDesc')) ;
+<<<<<<< HEAD
+=======
+
+    userdata = JSON.parse(localStorage.getItem("currAccount"));
+if(!userdata){
+  window.location.href = "../index.html";
+}
+>>>>>>> aa0221efc90ca35e11ad70c6c2857dbc9512fccc
 
     let userdata = JSON.parse(localStorage.getItem("currAccount"));
     if(userdata){
@@ -96,15 +104,17 @@ atc.addEventListener('click',function(){
                   n = true;
                   appendTp(i);
                   alert("Item already add");
-            }
-      }
+
       if (n==false){
             window.location.reload();
             obj.tp = tp.innerHTML;
             cartinfo.push(obj);
             localStorage.setItem('cart',JSON.stringify(cartinfo))
       }
+<<<<<<< HEAD
 
+=======
+>>>>>>> aa0221efc90ca35e11ad70c6c2857dbc9512fccc
 })
 
 function appendTp(i){
@@ -120,6 +130,7 @@ function appendTp(i){
 var buyNow = document.querySelector('#buyNow');
 
 buyNow.addEventListener('click',function(){
+<<<<<<< HEAD
       let flag = false;
       cartinfo.forEach(function(prod,i){
             if(prod.name == obj.name &&prod.img ==obj.img){
@@ -135,6 +146,20 @@ buyNow.addEventListener('click',function(){
       }else{
             window.location.href = "../cart/cart.html" // cart page link;
       }
+=======
+      arr[0].tp = tp.innerHTML;
+      localStorage.setItem('Cart',JSON.stringify(arr))
+      window.location.href = "../cart/confirm.html" // cart page link;
+})
+
+
+// linking pages in nav bar
+
+headcartSpan = document.querySelector("#headcartSpan");
+
+headcartSpan.addEventListener('click',function(){
+      window.location.href = "../cart/cart.html";
+>>>>>>> aa0221efc90ca35e11ad70c6c2857dbc9512fccc
 })
 
 
